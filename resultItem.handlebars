@@ -1,0 +1,52 @@
+<li>
+  <h2><a href="#{{this.uuid}}" data-id={{this.uuid}} class="item">
+    {{this.name}}
+  </a></h2>
+  <div id={{this.uuid}} class="item-details">
+    <table>
+      <tr>
+        <th colspan="2">Pokedex Data</th>
+      </tr>
+      {{#each (facets parent="Pokedex information")}}
+        <tr>
+          <td>{{capitalize this.name}}</td>
+          <td>{{this.displayValue}}</td>
+        </tr>
+      {{/each}}
+    </table>
+
+    <table>
+      <tr>
+        <th colspan="2">Type</th>
+      </tr>
+      <tr>
+        {{#each (facets parent="type")}}
+          {{#if (equals this.value 1)}}
+            <td>{{this.name}}</td>
+          {{/if}}
+        {{/each}}
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <th colspan="7">Base Stats</th>
+      </tr>
+      <tr>
+        <th>HP</th>
+        <th>Atk</th>
+        <th>Def</th>
+        <th>Spe</th>
+        <th>SpA</th>
+        <th>SpD</th>
+        <th>Total</th>
+      </tr>
+      <tr>
+        {{#each (facets parent="PokeStats")}}
+          <td>{{this.value}}</td>
+        {{/each}}
+      </tr>
+    </table>
+
+  </div>
+</li>

@@ -1,0 +1,9 @@
+{{log "env: develop"}}
+<h3>Pokemon {{pagination.firstResult}} to {{pagination.lastResult}}</h3>
+{{paginator pagination 5}}
+<ol start={{pagination.firstResult}}>
+  {{#each items}}
+    {{>resultItem this}}
+  {{/each}}
+</ol>
+{{paginator pagination 5}}

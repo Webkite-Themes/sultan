@@ -1,0 +1,5 @@
+templates:
+  - results.handlebars
+partials:
+  - paginator.handlebars
+  - resultItem.handlebars
