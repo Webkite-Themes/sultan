@@ -3,3 +3,4 @@ templates:
 partials:
   - paginator.handlebars
   - resultItem.handlebars
+  - sort.handlebars
