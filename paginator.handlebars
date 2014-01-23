@@ -1,8 +1,8 @@
 <nav class="webkite-results-paginator">
-  <a href="#webkite|page-1|per_page-{{perPage}}" {{#if isFirstPage}}disabled class="disabled"{{/if}}>&lt;&lt;</a>
-  <a href="#webkite|page-{{prevPage}}|per_page-{{perPage}}" {{#if isFirstPage}}disabled class="disabled"{{/if}}>&lt;</a>
+  <a href="#" data-page="1" data-per-page="{{perPage}}" {{#if isFirstPage}}disabled class="disabled"{{/if}}>&lt;&lt;</a>
+  <a href="#" data-page="{{prevPage}}" data-per-page="{{perPage}}" {{#if isFirstPage}}disabled class="disabled"{{/if}}>&lt;</a>
   {{#each pagesToShow}}
-  <a href="#webkite|page-{{this}}|per_page-{{../perPage}}">
+  <a href="#" data-page="{{this}}" data-per-page="{{../perPage}}">
     {{#if (equals ../page this)}}
       [{{this}}]
     {{else}}
@@ -10,6 +10,6 @@
     {{/if}}
   </a>
   {{/each}}
-  <a href="#webkite|page-{{nextPage}}|per_page-{{perPage}}" {{#if isLastPage}}disabled class="disabled"{{/if}}>&gt;</a>
-  <a href="#webkite|page-{{pages}}|per_page-{{perPage}}" {{#if isLastPage}}disabled class="disabled"{{/if}}>&gt;&gt;</a>
+  <a href="#" data-page="{{nextPage}}" data-per-page="{{perPage}}" {{#if isLastPage}}disabled class="disabled"{{/if}}>&gt;</a>
+  <a href="#" data-page="{{pages}}" data-per-page="{{perPage}}" {{#if isLastPage}}disabled class="disabled"{{/if}}>&gt;&gt;</a>
 </nav>
