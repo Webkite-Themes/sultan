@@ -22,7 +22,7 @@
       <tr>
         {{#each (facets parent="type")}}
           {{#if (equals this.value 1)}}
-            <td>{{this.name}}</td>
+            <td><a href="#" class="webkite-add-filter" data-facet="{{this.name}}" data-operator="eq" data-value="{{this.value}}">{{this.name}}</a></td>
           {{/if}}
         {{/each}}
       </tr>

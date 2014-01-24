@@ -1,9 +1,9 @@
-{{#if this.currentSort}}
-  Sorted by {{this.currentSort}} ({{this.currentDirection}}ending)
+{{#if currentSort}}
+  Sorted by {{currentSort}} ({{currentDirection}}ending)
 {{/if}}
 <div><select class="webkite-sort" name="webkite-sort">
   <option selected>Sort</option>
-  {{#each this.sortableFacets}}
-    <option value="{{this.name}}">{{this.name}}</option>
+  {{#each sortableFacets}}
+    <option value="{{name}}">{{name}}</option>
   {{/each}}
 </select></div>

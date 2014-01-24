@@ -4,3 +4,4 @@ partials:
   - paginator.handlebars
   - resultItem.handlebars
   - sort.handlebars
+  - filters.handlebars
