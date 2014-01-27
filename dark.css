@@ -1,0 +1,12 @@
+#webkite-results {
+  background-color: #000;
+  color: #fff;
+}
+
+#webkite-results a {
+  color: #ffbf00;
+}
+
+#webkite-results a:visited {
+  color: #fff;
+}
